@@ -3,9 +3,9 @@
 <h6>4:00 Hours Total</h6>
 <button class="start" {{action 'click'}}>Start</button>  {{moment-format comment.createdAt 'MMMM D, YYYY'}}
 <hr>
-<b>Start: </b>{{moment-format comment.createdAt 'h:mm A' date=d}}
+<b>Start: </b>{{moment-format comment.createdAt 'h:mm A'}}
 <hr>
-<button name="test" {{action 'displayDate' moment-format comment.createdAt 'h:mm'}}>Date</button>
+<button name="test" {{action 'displayDate'}}>Date</button>
 <hr>
 <b>End: </b>{{moment-duration 4 'hours'}}
 {{outlet}}

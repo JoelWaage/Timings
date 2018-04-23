@@ -12,8 +12,8 @@ export default Route.extend({
     displayDate() {
       var start = moment();
       var end = moment(start).add(65, 'minutes');
-      console.log(moment(start).format('h:mm'));
-      console.log(moment(end).format('h:mm'));
+      console.log(moment(start).format('h:mm a'));
+      console.log(moment(end).format('h:mm a'));
     }
   }
 });
