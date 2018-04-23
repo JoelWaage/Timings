@@ -10,9 +10,10 @@ export default Route.extend({
     },
 
     displayDate() {
-      console.log('click');
-      var start = moment().format('MM/DD/YYYY');
-      console.log(start);
+      var start = moment();
+      var end = moment(start).add(65, 'minutes');
+      console.log(moment(start).format('h:mm'));
+      console.log(moment(end).format('h:mm'));
     }
   }
 });
