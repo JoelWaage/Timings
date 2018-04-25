@@ -1,11 +1,23 @@
 <h2><b>Sat I</b></h2>
 <h3>Regular Time</h3>
 <h6>4:00 Hours Total</h6>
-<button class="start" {{action 'click'}}>Start</button>  {{moment-format comment.createdAt 'MMMM D, YYYY'}}
+{{moment-format comment.createdAt 'MMMM D, YYYY'}}
 <hr>
-<b>Start: </b>{{moment-format comment.createdAt 'h:mm A'}}
+<b>Populated from .hbs</b>
+<ul>
+  <li><b>Start: </b>{{moment-format comment.createdAt 'h:mm a'}}</li>
+  <li><b>Current: </b>{{moment-format (now interval=1000) 'hh:mm:ss a'}}</li>
+</ul>
 <hr>
-<button name="test" {{action 'displayDate'}}>Date</button>
+<b>Populated from .js</b>
+<ul>
+{{#each model as |sat|}}
+  <li>Today's Date: {{sat.date}}</li>
+  <li>Section 1 Start: {{sat.start}}</li>
+  <li>{{sat.now}}</li>
+  <li>Section 1 End: {{sat.end}}</li>
+{{/each}}
+</ul>
 <hr>
-<b>End: </b>{{moment-duration 4 'hours'}}
+<button name="test" {{action 'displayDate'}}>.js live time in console</button>
 {{outlet}}

@@ -1,14 +1,20 @@
 import Route from '@ember/routing/route';
 import moment from 'moment';
 
+var sat = [{
+  id: 1,
+  date: moment().format('MMMM D, YYYY'),
+  start: moment().format('h:mm a'),
+  now: moment(),
+  end: moment().add(4, 'hours').format('h:mm a')
+}];
+
 export default Route.extend({
-  moment: Ember.inject.service(),
+  model() {
+    return sat;
+  },
+
   actions: {
-
-    click() {
-      console.log('working');
-    },
-
     displayDate() {
       var start = moment();
       var end = moment(start).add(65, 'minutes');
