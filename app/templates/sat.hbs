@@ -1,13 +1,14 @@
 <h2><b>Sat I</b></h2>
 <h3>Regular Time</h3>
 <h6>4:00 Hours Total</h6>
-{{moment-format comment.createdAt 'MMMM D, YYYY'}}
+{{moment-format createdAt 'MMMM D, YYYY'}}
 <hr>
 <b>Populated from .hbs</b>
-<ul>
-  <li><b>Start: </b>{{moment-format comment.createdAt 'h:mm a'}}</li>
-  <li><b>Current: </b>{{moment-format (now interval=1000) 'hh:mm:ss a'}}</li>
-</ul>
+  <ul>
+    <li><b>Start: </b>{{moment-format comment.createdAt 'h:mm a'}}</li>
+    <li><b>Current: </b>{{moment-format (now interval=1000) 'hh:mm:ss a'}}</li>
+    <li>working on it</li>
+  </ul>
 <hr>
 <b>Populated from .js</b>
 <ul>
